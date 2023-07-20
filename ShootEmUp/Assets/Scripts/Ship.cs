@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class Ship : MonoBehaviour
 {
-
     Gun[] guns;
 
     public float moveSpeed = 5;
+    public float fireRate = 0.2f;
+    public float nextFireTime = 0f;
 
     private void Start()
     {
         guns = transform.GetComponentsInChildren<Gun>();
     }
-
-
 
     private void FixedUpdate()
     {
@@ -25,11 +24,17 @@ public class Ship : MonoBehaviour
             touchPosition.z = 0f;
             transform.position = Vector3.Lerp(transform.position, touchPosition, moveSpeed * Time.fixedDeltaTime);
 
-            foreach (Gun gun in guns)
+            // Check if enough time has passed since the last shot before allowing another shot.
+            if (Time.time >= nextFireTime)
             {
-                gun.Shoot();
+                foreach (Gun gun in guns)
+                {
+                    gun.Shoot();
+                }
+
+                // Calculate the time when the ship will be allowed to shoot again.
+                nextFireTime = Time.time + fireRate;
             }
         }
-
     }
 }

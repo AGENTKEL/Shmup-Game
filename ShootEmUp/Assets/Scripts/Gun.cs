@@ -15,11 +15,6 @@ public class Gun : MonoBehaviour
     }
 
 
-    void Update()
-    {
-        
-    }
-
     public void Shoot()
     {
         GameObject go = Instantiate(bullet.gameObject, transform.position, Quaternion.identity);
