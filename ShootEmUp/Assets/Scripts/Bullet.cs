@@ -10,6 +10,8 @@ public class Bullet : MonoBehaviour
 
     public Vector2 velocity;
 
+    public bool isEnemy = false;
+
 
     void Start()
     {
