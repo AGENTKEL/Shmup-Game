@@ -62,8 +62,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b53d7e3fd7997e48bf3b9e06831e4fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 2
-  frequency: 0.5
+  amplitude: 3
+  frequency: 1
   inverted: 1
 --- !u!50 &1789369252
 Rigidbody2D:

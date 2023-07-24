@@ -16,9 +16,14 @@ public class Destructable : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.x < 20f)
+        if (transform.position.x < 20f && !canBeDestroyed)
         {
             canBeDestroyed = true;
+            Gun [] guns = transform.GetComponentsInChildren<Gun>();
+            foreach (Gun gun in guns)
+            {
+                gun.isActive = true;
+            }
         }
     }
 

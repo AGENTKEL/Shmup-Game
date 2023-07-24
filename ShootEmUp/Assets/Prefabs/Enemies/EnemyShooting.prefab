@@ -46,8 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 2051779278133668694, guid: 57e2fdbd8bdada947b2dc747f9d3930b, type: 3}
   autoShoot: 1
-  shootIntervalSeconds: 0.5
+  shootIntervalSeconds: 0.8
   shootDelaySeconds: 0
+  isActive: 0
 --- !u!1 &2661748142735415050
 GameObject:
   m_ObjectHideFlags: 0

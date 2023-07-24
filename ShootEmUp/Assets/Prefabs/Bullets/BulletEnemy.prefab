@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 1, y: 0}
-  speed: 13
+  speed: 9
   velocity: {x: 0, y: 0}
   isEnemy: 1
 --- !u!61 &7812732351325105240

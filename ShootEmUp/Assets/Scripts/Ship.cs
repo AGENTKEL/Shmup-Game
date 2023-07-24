@@ -13,6 +13,10 @@ public class Ship : MonoBehaviour
     private void Start()
     {
         guns = transform.GetComponentsInChildren<Gun>();
+        foreach (Gun gun in guns)
+        {
+            gun.isActive = true;
+        }
     }
 
     private void FixedUpdate()
