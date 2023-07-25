@@ -10,7 +10,7 @@ public class Destructable : MonoBehaviour
 
     void Start()
     {
-        
+        Level.instance.AddDestructables();
     }
 
 
@@ -44,5 +44,10 @@ public class Destructable : MonoBehaviour
                 Destroy(bullet.gameObject);
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        Level.instance.RemoveDestructables();
     }
 }
